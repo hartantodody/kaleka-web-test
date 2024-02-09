@@ -7,6 +7,9 @@ export default {
         main: "#F8BE1A",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
   },
   plugins: [],
 };
