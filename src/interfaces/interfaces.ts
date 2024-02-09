@@ -9,3 +9,9 @@ export interface NavLinkProps {
 export interface PublicLayoutProps {
   children: ReactNode;
 }
+
+export interface FetchProps<T> {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+}

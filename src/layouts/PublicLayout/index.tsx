@@ -1,6 +1,6 @@
 import { Navbar } from "../../components";
 import headerImage from "../../assets/header-farmer.webp";
-import { PublicLayoutProps } from "../../interfaces/interface";
+import { PublicLayoutProps } from "../../interfaces/interfaces";
 
 const PublicLayout = ({ children }: PublicLayoutProps) => {
   return (

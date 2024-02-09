@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavLinkProps } from "../../interfaces/interface";
+import { NavLinkProps } from "../../interfaces/interfaces";
 
 const NavLink: React.FC<NavLinkProps> = ({ children, route }) => {
   return (
