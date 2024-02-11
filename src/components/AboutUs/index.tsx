@@ -1,4 +1,4 @@
-const AboutMe = () => {
+const AboutUs = () => {
   const h2Style = "font-bold text-[16px] lg:text-[18px] leading-[21.78px] underline";
   const paragraphStyle = "font-normal text-[16px] lg:text-[18px] leading-[21.78px]";
 
@@ -55,4 +55,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutUs;

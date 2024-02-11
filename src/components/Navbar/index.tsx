@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "..";
-import kalekaLogo from "../../assets/kaleka-logo.png";
+import { motion } from "framer-motion";
+import kalekaLogo from "../../assets/kaleka-logo.svg";
 import hamburgerButton from "../../assets/hamburger-button.svg";
 import closeButton from "../../assets/close-icon.svg";
 
@@ -27,9 +28,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='px-[23px] py-[18px] w-[100%] h-[103px] bg-black flex items-center'>
-        <img className='h-[67px] w-[192px]' src={kalekaLogo} alt='kaleka logo' />
-        <div className='w-full lg:w-calc(100vw-192px) flex justify-end lg:justify-center items-center'>
+      <nav className='py-[18px] w-[100%] h-[103px] bg-black flex items-center z-[99] fixed'>
+        <img className='pl-[23px] h-[67px] w-[192px]' src={kalekaLogo} alt='kaleka logo' />
+        <div className='absolute w-full lg:w-[100vw] flex justify-end lg:justify-center items-center'>
           {/* Hamburger Button */}
           {!isMobileMenuOpen && (
             <img
@@ -56,26 +57,29 @@ const Navbar = () => {
               <NavLink route='/'>BERANDA</NavLink>
             </li>
             <li>
-              <NavLink route='/'>TENTANG KAMI</NavLink>
+              <NavLink route='/about-us'>TENTANG KAMI</NavLink>
             </li>
           </ul>
         </div>
       </nav>
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <ul className='h-[100vh] w-[100vw] bg-black flex flex-col justify-start items-center gap-4'>
-          <li>
-            <NavLink route='/' onClick={toggleMobileMenu}>
-              BERANDA
-            </NavLink>
-          </li>
-          <li>
-            <NavLink route='/' onClick={toggleMobileMenu}>
-              TENTANG KAMI
-            </NavLink>
-          </li>
-        </ul>
-      )}
+      <motion.ul
+        className='z-[90] h-[100vh] w-[100vw] pt-[105px] bg-black flex flex-col justify-start items-center gap-4 fixed'
+        initial={{ y: -2000 }}
+        animate={{ y: isMobileMenuOpen ? 0 : -2000 }}
+        transition={{ duration: 0.3 }}
+      >
+        <li>
+          <NavLink route='/' onClick={toggleMobileMenu}>
+            BERANDA
+          </NavLink>
+        </li>
+        <li>
+          <NavLink route='/about-us' onClick={toggleMobileMenu}>
+            TENTANG KAMI
+          </NavLink>
+        </li>
+      </motion.ul>
     </>
   );
 };
