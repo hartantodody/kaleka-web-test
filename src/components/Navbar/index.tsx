@@ -30,7 +30,7 @@ const Navbar = () => {
     <>
       <nav className='py-[18px] w-[100%] h-[103px] bg-black flex items-center z-[99] fixed'>
         <img className='pl-[23px] h-[67px] w-[192px]' src={kalekaLogo} alt='kaleka logo' />
-        <div className='absolute w-full lg:w-[100vw] flex justify-end lg:justify-center items-center'>
+        <div className='absolute w-[calc(100%_-_15px)] lg:w-full flex justify-end lg:justify-center items-center'>
           {/* Hamburger Button */}
           {!isMobileMenuOpen && (
             <img

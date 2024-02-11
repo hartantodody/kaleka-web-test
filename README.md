@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Kaleka Web Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a technical test for Kaleka Front-End Developer Recruitment 2024. In this React App, demonstrates how to integrate Leaflet maps into a React project using the `react-leaflet` library. The app allows users to view a map with marked locations and navigate to a detailed view of each location.
 
-Currently, two official plugins are available:
+## Preview
+You can check the site from this url :
+- [Kaleka Web Test](https://main--kaleka-webtest.netlify.app/detail/113.87535787965106,-1.1057614895977395)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Display a map with marked locations.
+- Click on a location to view detailed information of the coordinates.
+- Responsive design for desktop, tablet, and mobile devices.
+- Integration with React Router for navigation.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
+- Beranda (/): Displays a map with marked locations. Clicking on a location opens a popup with text if it clicked it opens Detail Coordinate Page.
+- Detail Coordinate (/detail/:coordinates): Displays detailed information about a specific location identified by its coordinates.
+- Tentang Kami (/about-us) : Displays the detailed information about Kaleka and our vision, mission, and purpose of this NGO.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tech Stack
+- React + Typescript
+- Tailwind CSS
+- Leaflet
+- React-Leaflet
+- Framer Motion
