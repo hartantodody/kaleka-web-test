@@ -4,7 +4,7 @@ This is a technical test for Kaleka Front-End Developer Recruitment 2024. In thi
 
 ## Preview
 You can check the site from this url :
-- [Kaleka Web Test](https://main--kaleka-webtest.netlify.app/detail/113.87535787965106,-1.1057614895977395)
+- [Kaleka Web Test](https://main--kaleka-webtest.netlify.app/)
 
 ## Features
 
